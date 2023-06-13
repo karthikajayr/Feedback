@@ -64,7 +64,7 @@ const App = () => {
           <div className="main flex w-full h-screen font-black ">
             <div className="left flex-col basis-1/2 justify-center items-center border-white rounded-[20px] border-[2px] m-20 my-10 backdrop-blur-sm">
 
-              <div className='left_heading text-4xl text-white pt-10 pl-10'>
+              <div className='left_heading text-4xl text-white pt-10 pl-10 pb-2'>
                 Feedback.
               </div>
 
@@ -72,22 +72,85 @@ const App = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeholder="Name*"
                   autoComplete='off'
-                  className="m-6 placeholder:text-gray-600 text-white rounded-lg outline-none border-b-2 border-white p-2 bg-transparent"
+                  required
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white  outline-none border-b-2 border-white p-2 bg-transparent"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <input
+                  type='email'
+                  name="email"
+                  placeholder="E-Mail*"
+                  autoComplete='off'
+                  required
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white  outline-none border-b-2 border-white p-2 bg-transparent"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <input
+                  type='text'
+                  name="organization"
+                  placeholder="Organization"
+                  autoComplete='off'
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
                 />
               </div>
 
 
-
-
             </div>
 
-            <div className="right basis-1/2 flex justify-center items-center border-white rounded-[20px] border-[2px] m-20 my-10 backdrop-blur-sm">
-              Check.
+            <div className="right basis-1/2 flex-col justify-center items-center border-white rounded-[20px] border-[2px] m-20 my-10 backdrop-blur-sm">
+
+              <div className='left_heading text-2xl text-white pt-12 pl-10 pb-2'>
+                Project Details.
+              </div>
+
+              <div className="flex flex-col">
+                <input
+                  type='text'
+                  name="projectname"
+                  placeholder="Project Name*"
+                  autoComplete='off'
+                  required
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
+                />
+              </div>
+
+              <div className='flex mx-10 justify-between m-5'>
+                <div className='flex  text-gray-300'>
+                  Browse Projects in My Github Repositories
+                </div>
+                <div className="flex ">
+                  <button class="border border-gray-500 hover:border-white text-gray-500 hover:text-white font-bold py-2 px-4 rounded ">
+                    Github 
+                  </button>
+                </div>
+              </div>
+
+              <div className="flex flex-col">
+                <textarea
+                  name="comments"
+                  id="comments"
+                  rows={3}
+                  placeholder="Comments*"
+                  autoComplete='off'
+                  required
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
+                />
+              </div>
+
             </div>
           </div>
 
+        </div>
+        <div className="text-center w-full p-1 text-sm md:text-base">
+          <p>
+            Copyrights &copy; 2023 Karthik R | Voidex | All Rights Reserved
+          </p>
         </div>
       </>
     );
