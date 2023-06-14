@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import video from "./assets/video.mp4";
+import github from "./assets/github_logo.svg";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -99,8 +100,6 @@ const App = () => {
                   className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
                 />
               </div>
-
-
             </div>
 
             <div className="right basis-1/2 flex-col justify-center items-center border-white rounded-[20px] border-[2px] m-20 my-10 backdrop-blur-sm">
@@ -120,13 +119,17 @@ const App = () => {
                 />
               </div>
 
-              <div className='flex mx-10 justify-between m-5'>
+              <div className='flex mx-10 justify-between items-center m-5'>
                 <div className='flex  text-gray-300'>
                   Browse Projects in My Github Repositories
                 </div>
+
                 <div className="flex ">
-                  <button class="border border-gray-500 hover:border-white text-gray-500 hover:text-white font-bold py-2 px-4 rounded ">
-                    Github 
+                  <button class="flex justify-between items-center gap-5 border border-gray-500 hover:border-white text-gray-500 hover:text-white font-bold py-2 px-4 rounded ">
+                    <img src={github} alt="Logo" className="logo h-[30px] w-[30px] " />
+                    <div>
+                      Github
+                    </div>
                   </button>
                 </div>
               </div>
@@ -142,16 +145,16 @@ const App = () => {
                   className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
                 />
               </div>
-
             </div>
           </div>
-
         </div>
+
         <div className="text-center w-full p-1 text-sm md:text-base">
           <p>
             Copyrights &copy; 2023 Karthik R | Voidex | All Rights Reserved
           </p>
         </div>
+
       </>
     );
   }
