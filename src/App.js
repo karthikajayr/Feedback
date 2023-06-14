@@ -100,6 +100,9 @@ const App = () => {
                   className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
                 />
               </div>
+
+              
+
             </div>
 
             <div className="right basis-1/2 flex-col justify-center items-center border-white rounded-[20px] border-[2px] m-20 my-10 backdrop-blur-sm">
