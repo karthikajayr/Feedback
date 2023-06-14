@@ -102,7 +102,6 @@ const App = () => {
               </div>
 
               
-
             </div>
 
             <div className="right basis-1/2 flex-col justify-center items-center border-white rounded-[20px] border-[2px] m-20 my-10 backdrop-blur-sm">
