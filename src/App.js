@@ -165,7 +165,7 @@ const App = () => {
                 </div>
 
                 <div className="flex ">
-                  <button class="flex justify-between items-center gap-5 border border-gray-500 hover:border-white text-gray-500 hover:text-white font-bold py-2 px-4 rounded ">
+                  <button className="flex justify-between items-center gap-5 border border-gray-500 hover:border-white text-gray-500 hover:text-white font-bold py-2 px-4 rounded ">
                     <img src={github} alt="Logo" className="logo h-[30px] w-[30px] " />
                     <div className=' hidden gitname:block'>
                       Github
@@ -185,6 +185,8 @@ const App = () => {
                   className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
                 />
               </div >
+
+
               <div className=' text-white m-3 mx-10 p-2'>
                 Overall Ratings
               </div>
@@ -193,6 +195,19 @@ const App = () => {
                   <StarRating rating={rating} onRatingChange={handleRatingChange} />
                   <p className=' text-white'>Selected rating: {rating}</p>
                 </div>
+              </div>
+
+              <div className='flex justify-between mx-10 p-5 m-3 '>
+                <button 
+                type='submit'
+                className="flex justify-between items-center gap-5 border border-gray-500 hover:border-green-500 text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded ">
+                  Submit
+                </button>
+                <button 
+                type='clear'
+                className="flex justify-between items-center gap-5 border border-gray-500 hover:border-red-500 text-gray-500 hover:text-red-500 font-bold py-2 px-4 rounded ">
+                  Clear
+                </button>
               </div>
 
             </div>
