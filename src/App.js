@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import video from "./assets/video.mp4";
 import github from "./assets/github_logo.svg";
+import StarRating from './StarRating'
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const [rating, setRating] = useState(null);
+
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+  };
+
   useEffect(() => {
     const checkIsMobile = () => {
-      const mobileWidthThreshold = 1280; // Adjust this value based on your requirements
+      const mobileWidthThreshold = 1000; // Adjust this value based on your requirements
       setIsMobile(window.innerWidth < mobileWidthThreshold);
     };
 
@@ -178,6 +185,15 @@ const App = () => {
                   className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
                 />
               </div >
+              <div className=' text-white m-3 mx-10 p-2'>
+                Overall Ratings
+              </div>
+              <div className='flex justify-center items-center m-2'>
+                <div>
+                  <StarRating rating={rating} onRatingChange={handleRatingChange} />
+                  <p className=' text-white'>Selected rating: {rating}</p>
+                </div>
+              </div>
 
             </div>
           </div>
