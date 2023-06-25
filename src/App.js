@@ -94,6 +94,17 @@ const App = () => {
               <div className="flex flex-col">
                 <input
                   type='text'
+                  name="occupation"
+                  placeholder="Occupation*"
+                  autoComplete='off'
+                  required
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <input
+                  type='text'
                   name="organization"
                   placeholder="Organization"
                   autoComplete='off'
@@ -101,7 +112,27 @@ const App = () => {
                 />
               </div>
 
-              
+              <div className="flex flex-col">
+                <input
+                  type='text'
+                  name="githubusername"
+                  placeholder="Github Username"
+                  autoComplete='off'
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <input
+                  type='text'
+                  name="linkedinprofile"
+                  placeholder="LinkedIn Profile"
+                  autoComplete='off'
+                  className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
+                />
+              </div>
+
+
             </div>
 
             <div className="right basis-1/2 flex-col justify-center items-center border-white rounded-[20px] border-[2px] m-20 my-10 backdrop-blur-sm">
@@ -129,7 +160,7 @@ const App = () => {
                 <div className="flex ">
                   <button class="flex justify-between items-center gap-5 border border-gray-500 hover:border-white text-gray-500 hover:text-white font-bold py-2 px-4 rounded ">
                     <img src={github} alt="Logo" className="logo h-[30px] w-[30px] " />
-                    <div>
+                    <div className=' hidden gitname:block'>
                       Github
                     </div>
                   </button>
@@ -146,7 +177,8 @@ const App = () => {
                   required
                   className="m-6 mx-10 placeholder:text-gray-500 text-white outline-none border-b-2 border-white p-2 bg-transparent"
                 />
-              </div>
+              </div >
+
             </div>
           </div>
         </div>
